@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/gelatina-cafe-leche.jpeg"
 title: "Gelatina cremosa de rompope"
 slug: "gelatina-cremosa-de-rompope"
 post_type: "recipe"

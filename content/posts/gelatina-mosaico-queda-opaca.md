@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/errores-comunes-negocio-postres.jpeg"
 title: "Por qué la gelatina de mosaico queda opaca (y cómo evitarlo)"
 slug: "gelatina-mosaico-queda-opaca"
 post_type: "post"

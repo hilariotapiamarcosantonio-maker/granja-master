@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/gelatina-cafe-leche.jpeg"
 title: "Gelatina de queso con guayaba"
 slug: "gelatina-de-queso-con-guayaba"
 post_type: "recipe"

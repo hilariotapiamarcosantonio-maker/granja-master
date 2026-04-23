@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/conservacion-postres-refrigeracion.jpeg"
 title: "Postres fáciles para cumpleaños de adultos que no son torta"
 slug: "postres-faciles-cumpleanos-adultos"
 post_type: "post"

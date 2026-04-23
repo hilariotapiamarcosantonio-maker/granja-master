@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/conservacion-postres-refrigeracion.jpeg"
 title: "Gelatinas temáticas para fiestas infantiles: ideas que sí funcionan"
 slug: "gelatinas-tematicas-fiestas-infantiles"
 post_type: "post"

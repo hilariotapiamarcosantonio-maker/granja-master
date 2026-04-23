@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/cheesecake-fresa-vaso.jpeg"
 title: "Gelatina en vaso de fresa con crema"
 slug: "gelatina-en-vaso-de-fresa-con-crema"
 post_type: "recipe"

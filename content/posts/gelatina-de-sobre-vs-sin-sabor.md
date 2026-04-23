@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/fijar-precios-postres1.jpeg"
 title: "Diferencia entre gelatina de sobre y gelatina sin sabor"
 slug: "gelatina-de-sobre-vs-sin-sabor"
 post_type: "post"

@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/como-calcular-costos.jpeg"
 title: "Cómo fijar el precio de tus gelatinas sin quedarte sin ganancia"
 slug: "como-fijar-precio-gelatinas"
 post_type: "post"

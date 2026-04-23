@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/gelatina-cafe-leche.jpeg"
 title: "Gelatina de agua de colores en capas (para aprender la técnica)"
 slug: "gelatina-agua-colores-capas"
 post_type: "recipe"

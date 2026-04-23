@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/empaques-para-postres.jpeg"
 title: "Cómo empacar gelatinas para entrega sin que lleguen dañadas"
 slug: "empacar-gelatinas-para-entrega"
 post_type: "post"

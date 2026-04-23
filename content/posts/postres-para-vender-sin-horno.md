@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/empaques-para-postres.jpeg"
 title: "Ideas de postres para vender en casa sin horno"
 slug: "postres-para-vender-sin-horno"
 post_type: "post"

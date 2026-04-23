@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/carlota-limon-vaso.jpeg"
 title: "Gelatina en vaso de mango con chile y crema"
 slug: "gelatina-en-vaso-mango-chile-crema"
 post_type: "recipe"

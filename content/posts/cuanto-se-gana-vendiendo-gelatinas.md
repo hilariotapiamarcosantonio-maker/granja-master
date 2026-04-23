@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/errores-comunes-negocio-postres.jpeg"
 title: "Cuánto se gana vendiendo gelatinas desde casa"
 slug: "cuanto-se-gana-vendiendo-gelatinas"
 post_type: "post"

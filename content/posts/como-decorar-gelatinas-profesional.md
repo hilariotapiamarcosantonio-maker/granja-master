@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/como-calcular-costos.jpeg"
 title: "Cómo decorar gelatinas para que se vean profesionales"
 slug: "como-decorar-gelatinas-profesional"
 post_type: "post"

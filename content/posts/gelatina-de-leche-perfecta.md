@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/rentabilidad-postres-vaso1.jpeg"
 title: "Cómo hacer gelatina de leche que no quede aguada"
 slug: "gelatina-de-leche-perfecta"
 post_type: "post"

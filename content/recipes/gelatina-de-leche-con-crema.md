@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/gelatina-cafe-leche.jpeg"
 title: "Gelatina de leche con crema (la clásica que nunca falla)"
 slug: "gelatina-de-leche-con-crema"
 post_type: "recipe"

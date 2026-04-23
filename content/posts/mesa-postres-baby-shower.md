@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/conservacion-postres-refrigeracion.jpeg"
 title: "Cómo armar una mesa de postres para baby shower"
 slug: "mesa-postres-baby-shower"
 post_type: "post"

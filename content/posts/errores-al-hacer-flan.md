@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/errores-comunes-negocio-postres.jpeg"
 title: "7 errores comunes al hacer flan y cómo evitarlos"
 slug: "errores-al-hacer-flan"
 post_type: "post"

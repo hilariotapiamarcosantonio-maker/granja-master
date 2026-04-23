@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/carlota-limon-vaso.jpeg"
 title: "Mousse de limón sin horno (4 ingredientes)"
 slug: "mousse-de-limon-sin-horno"
 post_type: "recipe"

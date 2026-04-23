@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/fotografia-postres-celular.jpeg"
 title: "¿Se puede congelar la gelatina? Lo que nadie te dice"
 slug: "se-puede-congelar-la-gelatina"
 post_type: "post"

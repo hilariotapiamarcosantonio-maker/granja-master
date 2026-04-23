@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/gelatina-mosaico-premium.jpeg"
 title: "Gelatina de mosaico de tres leches"
 slug: "gelatina-mosaico-tres-leches"
 post_type: "recipe"

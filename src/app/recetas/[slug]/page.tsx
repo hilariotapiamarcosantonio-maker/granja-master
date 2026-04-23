@@ -75,7 +75,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       {/* Hero Section de la Receta */}
       <div className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
         <SafeImage 
-          src={post.frontmatter.featuredImage || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop"} 
+          src={post.frontmatter.featuredImage || post.frontmatter.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop"} 
           alt={post.frontmatter.title}
           className="w-full h-full object-cover"
           fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop"

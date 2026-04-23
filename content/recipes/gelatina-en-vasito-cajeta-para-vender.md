@@ -1,4 +1,5 @@
 ---
+image: "/images/recipes/mejores-postres-para-vender-verano.jpeg"
 title: "Gelatina de leche en vasito con cajeta para vender"
 slug: "gelatina-en-vasito-cajeta-para-vender"
 post_type: "recipe"

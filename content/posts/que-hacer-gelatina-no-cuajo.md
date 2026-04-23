@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/tendencias-postres-20261.jpeg"
 title: "Qué hacer si la gelatina no cuajó"
 slug: "que-hacer-gelatina-no-cuajo"
 post_type: "post"

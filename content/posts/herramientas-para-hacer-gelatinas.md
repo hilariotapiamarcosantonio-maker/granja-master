@@ -1,4 +1,5 @@
 ---
+image: "/images/posts/empaques-para-postres.jpeg"
 title: "Qué necesitas para hacer gelatinas en casa (sin gastar de más)"
 slug: "herramientas-para-hacer-gelatinas"
 post_type: "post"
