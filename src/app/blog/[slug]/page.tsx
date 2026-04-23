@@ -15,6 +15,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.frontmatter.meta_title || post.frontmatter.title,
     description: post.frontmatter.meta_description,
+    openGraph: {
+      title: post.frontmatter.meta_title || post.frontmatter.title,
+      description: post.frontmatter.meta_description,
+      images: [post.frontmatter.featuredImage || '/logo-gelatinas-y-postres.png'],
+      url: `https://gelatinasypostres.com/blog/${resolvedParams.slug}`,
+      type: 'article',
+    },
   };
 }
 

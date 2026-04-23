@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import HotmartButton from "../../../components/monetization/HotmartButton";
 import AmazonProduct from "../../../components/monetization/AmazonProduct";
+import AdPlaceholder from "@/components/AdPlaceholder";
 import SafeImage from "@/components/ui/SafeImage";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -32,7 +33,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.frontmatter.meta_title || post.frontmatter.title,
     description: post.frontmatter.meta_description,
     openGraph: {
+      title: post.frontmatter.meta_title || post.frontmatter.title,
+      description: post.frontmatter.meta_description,
       images: [post.frontmatter.featuredImage || '/logo-gelatinas-y-postres.png'],
+      url: `https://gelatinasypostres.com/recetas/${resolvedParams.slug}`,
+      type: 'article',
     },
   };
 }
@@ -98,6 +103,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <div className="prose prose-pink prose-lg max-w-none font-base">
           <MDXRemote source={post.content} components={components} />
         </div>
+        <AdPlaceholder />
       </article>
 
       {/* Navegación Premium entre Recetas */}

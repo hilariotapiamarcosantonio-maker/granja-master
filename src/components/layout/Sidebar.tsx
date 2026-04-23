@@ -1,10 +1,12 @@
+import AdPlaceholder from '../AdPlaceholder';
 import AdSlot from '../monetization/AdSlot';
+
 export default function Sidebar() {
   return (
     <aside className="space-y-8">
       <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
         <h3 className="font-heading text-lg mb-4 border-b pb-2 text-brand-primary">Publicidad</h3>
-        <AdSlot width={250} height={250} />
+        <AdPlaceholder />
       </div>
       <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
         <h3 className="font-heading text-lg mb-4 border-b pb-2 text-brand-primary">Categorías</h3>
