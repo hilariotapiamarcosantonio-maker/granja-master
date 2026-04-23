@@ -123,4 +123,4 @@ Si no conoces bien la tolerancia a picante de tu cliente, sirve el chile a un la
 ---
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
-<HotmartButton url="[https://go.hotmart.com/TU_LINK_REAL](https://go.hotmart.com/TU_LINK_REAL)" texto="Acceder al Recetario Maestro" />
+<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Acceder al Recetario Maestro" />

@@ -113,4 +113,4 @@ Para eventos, córtala en la mesa frente a los invitados — ese momento siempre
 ---
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
-<HotmartButton url="[https://go.hotmart.com/TU_LINK_REAL](https://go.hotmart.com/TU_LINK_REAL)" texto="Acceder al Recetario Maestro" />
+<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Acceder al Recetario Maestro" />

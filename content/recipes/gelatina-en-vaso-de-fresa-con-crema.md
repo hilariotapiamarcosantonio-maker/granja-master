@@ -115,4 +115,4 @@ La técnica de capas que usas aquí aplica exactamente igual para hacer la [Gela
 ---
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
-<HotmartButton url="[https://go.hotmart.com/TU_LINK_REAL](https://go.hotmart.com/TU_LINK_REAL)" texto="Acceder al Recetario Maestro" />
+<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Acceder al Recetario Maestro" />
