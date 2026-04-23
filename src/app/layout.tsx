@@ -37,11 +37,14 @@ export default function RootLayout({
     <Link href="/" className="font-heading text-xl font-bold text-brand-primary">
       Gelatinas y Postres
     </Link>
-    <nav className="flex gap-6 text-sm font-bold text-brand-text">
+    <nav className="flex items-center gap-6 text-sm font-bold text-brand-text">
       <Link href="/" className="hover:text-brand-primary transition-colors">Inicio</Link>
       <Link href="/recetas" className="hover:text-brand-primary transition-colors">Recetas</Link>
       <Link href="/blog" className="hover:text-brand-primary transition-colors">Blog</Link>
-      <Link href="/recetario" className="text-brand-primary border-b-2 border-brand-primary hover:text-brand-accent transition-colors">Recetario Gratis / PDF</Link>
+      <Link href="/biblioteca" className="hover:text-brand-primary transition-colors">Biblioteca</Link>
+      <Link href="/masterclass" className="bg-[#DC2626] text-white px-5 py-2.5 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg hover:scale-105 transition-all animate-pulse">
+        Masterclass VSL
+      </Link>
     </nav>
   </div>
 </header>
@@ -73,8 +76,8 @@ export default function RootLayout({
         <p className="text-white/80 font-base text-sm leading-relaxed">
           Recetas, ideas y recursos para preparar, compartir y vender desde casa.
         </p>
-        <Link href="/recetario" className="inline-block bg-white text-brand-primary font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full shadow hover:bg-brand-surface transition-colors">
-          Ver Recetario Gratis
+        <Link href="/biblioteca" className="inline-block bg-white text-brand-primary font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full shadow hover:bg-brand-surface transition-colors">
+          Descargar PDFs Gratis
         </Link>
       </div>
 
@@ -85,18 +88,16 @@ export default function RootLayout({
           <li><Link href="/" className="hover:text-brand-accent transition-colors">Inicio</Link></li>
           <li><Link href="/recetas" className="hover:text-brand-accent transition-colors">Recetas</Link></li>
           <li><Link href="/blog" className="hover:text-brand-accent transition-colors">Blog</Link></li>
-          <li><Link href="/recetario" className="hover:text-brand-accent transition-colors">Recetario Gratis / PDF</Link></li>
+          <li><Link href="/biblioteca" className="hover:text-brand-accent transition-colors">Biblioteca (PDFs)</Link></li>
         </ul>
       </div>
 
-      {/* Columna 3: Explora (Categorías) */}
+      {/* Columna 3: Legal */}
       <div>
-        <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">Explora</h4>
+        <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-sm">Legal</h4>
         <ul className="space-y-4 text-sm text-white/80 font-base">
-          <li><Link href="/categoria/recetas-faciles" className="hover:text-brand-accent transition-colors">Recetas Fáciles</Link></li>
-          <li><Link href="/categoria/postres-para-vender" className="hover:text-brand-accent transition-colors">Postres para Vender</Link></li>
-          <li><Link href="/categoria/inspiracion" className="hover:text-brand-accent transition-colors">Inspiración</Link></li>
-          <li><Link href="/categoria/guias" className="hover:text-brand-accent transition-colors">Guías</Link></li>
+          <li><Link href="/politica-de-privacidad" className="hover:text-brand-accent transition-colors">Política de Privacidad</Link></li>
+          <li><Link href="/terminos-y-condiciones" className="hover:text-brand-accent transition-colors">Términos y Condiciones</Link></li>
         </ul>
       </div>
 

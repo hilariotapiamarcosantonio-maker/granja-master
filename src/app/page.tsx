@@ -23,11 +23,11 @@ export default async function Home() {
             Recetas probadas, técnicas de alta repostería y estrategias de negocio para convertir tu cocina en un activo de soberanía digital.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Link href="/recetario" className="bg-brand-primary text-white font-bold uppercase tracking-wide px-8 py-4 rounded shadow-lg hover:bg-brand-accent transition-all">
-              Descargar Recetario Gratis
+            <Link href="/masterclass" className="bg-[#DC2626] text-white font-black uppercase tracking-widest px-8 py-4 rounded-xl shadow-[0_5px_0_#991b1b] hover:translate-y-1 hover:shadow-[0_2px_0_#991b1b] transition-all animate-pulse">
+              Ver Masterclass Premium
             </Link>
-            <Link href="/recetas" className="bg-white text-brand-primary border-2 border-brand-primary font-bold uppercase tracking-wide px-8 py-4 rounded hover:bg-brand-surface transition-all">
-              Ver Todas las Recetas
+            <Link href="/biblioteca" className="bg-white text-brand-primary border-2 border-brand-primary font-bold uppercase tracking-wide px-8 py-4 rounded-xl hover:bg-brand-surface transition-all">
+              Descargar PDFs Gratis
             </Link>
           </div>
         </div>
@@ -160,8 +160,8 @@ export default async function Home() {
         <p className="text-white/80 font-base max-w-xl mx-auto">
           Descarga nuestra guía maestra y descubre cómo logramos texturas perfectas y un negocio rentable.
         </p>
-        <Link href="/recetario" className="inline-block bg-brand-accent text-brand-text font-bold uppercase tracking-widest px-8 py-3.5 rounded-full hover:shadow-lg transition-all active:scale-95">
-          Acceder al Recetario Ahora
+        <Link href="/biblioteca" className="inline-block bg-brand-accent text-brand-text font-bold uppercase tracking-widest px-8 py-3.5 rounded-full hover:shadow-lg transition-all active:scale-95">
+          Acceder a la Biblioteca Ahora
         </Link>
       </section>
 
