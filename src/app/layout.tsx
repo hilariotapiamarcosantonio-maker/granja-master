@@ -5,6 +5,7 @@ import Link from "next/link";
 import Sidebar from "@/components/layout/Sidebar";
 import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -33,21 +34,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col antialiased bg-white">
         
         {/* Encabezado Principal */}
-        <header className="w-full bg-white py-4 border-b border-gray-100 shadow-sm sticky top-0 z-50">
-  <div className="container mx-auto px-4 max-w-6xl flex justify-between items-center">
-    <Link href="/" className="font-heading text-xl font-bold text-brand-primary">
-      Gelatinas y Postres
-    </Link>
-    <nav className="flex items-center gap-2 md:gap-6 text-[10px] md:text-sm font-bold text-brand-text">
-      <Link href="/" className="hover:text-brand-primary transition-colors hidden sm:block">Inicio</Link>
-      <Link href="/recetas" className="hover:text-brand-primary transition-colors">Recetas</Link>
-      <Link href="/blog" className="hover:text-brand-primary transition-colors hidden sm:block">Blog</Link>
-      <Link href="/masterclass" className="bg-[#DC2626] text-white px-3 py-2 md:px-5 md:py-2.5 rounded-full font-black uppercase tracking-widest text-[9px] md:text-[10px] shadow-lg hover:scale-105 transition-all animate-pulse">
-        Masterclass
-      </Link>
-    </nav>
-  </div>
-</header>
+        <Navbar />
 
         {/* Contenedor de la Granja */}
         <div className="container mx-auto px-4 py-8 flex-grow max-w-6xl">
