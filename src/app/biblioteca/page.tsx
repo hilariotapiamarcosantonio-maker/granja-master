@@ -14,9 +14,9 @@ export default async function BibliotecaPage() {
   const { populares } = await getLibraryData();
 
   const recursosDescargables = [
-    { t: "Calculadora de Costos", d: "Calculadora técnica de márgenes (Automatizada Excel)", link: "#" },
-    { t: "Guía WhatsApp Business", d: "Guiones exactos para cerrar ventas por chat", link: "#" },
-    { t: "Recetario de 10 Postres", d: "10 recetas diseñadas para la recompra semanal", link: "#" }
+    { t: "Calculadora de Costos", d: "Calculadora técnica de márgenes (Automatizada Excel)", link: "/docs/Calculadora_Costos_Gelatinas.pdf" },
+    { t: "Guía WhatsApp Business", d: "Guiones exactos para cerrar ventas por chat", link: "/docs/Guia_WhatsApp_Ventas.pdf" },
+    { t: "Recetario de 10 Postres", d: "10 recetas diseñadas para la recompra semanal", link: "/docs/Mini_Recetario_10_Postres.pdf" }
   ];
 
   return (
@@ -41,7 +41,7 @@ export default async function BibliotecaPage() {
               <span className="text-yellow-400 font-black uppercase tracking-widest text-xs">Recomendado</span>
               <h3 className="text-4xl md:text-5xl font-black tracking-tighter">Blueprint Maestro</h3>
               <p className="text-slate-400 text-lg">El sistema completo para dominar la rentabilidad en el nicho de postres.</p>
-              <span className="inline-block bg-yellow-400 text-slate-950 font-black px-6 py-3 rounded-xl uppercase tracking-widest text-sm">Acceder al VSL</span>
+              <span className="inline-block bg-yellow-400 text-slate-950 font-black px-8 py-4 rounded-xl uppercase tracking-widest text-sm hover:bg-white transition-colors">Acceso Inmediato</span>
             </div>
           </div>
         </Link>
@@ -76,7 +76,7 @@ export default async function BibliotecaPage() {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-2">{item.t}</h4>
               <p className="text-slate-500 text-sm mb-6 flex-grow">{item.d}</p>
-              <a href={item.link} className="w-full bg-[#00B547] text-white font-black uppercase tracking-widest text-xs px-6 py-4 rounded-xl hover:bg-[#009b3d] transition-colors">
+              <a href={item.link} download className="w-full bg-[#00B547] text-white font-black uppercase tracking-widest text-xs px-6 py-4 rounded-xl hover:bg-[#009b3d] transition-colors">
                 Obtener Gratis
               </a>
             </div>
