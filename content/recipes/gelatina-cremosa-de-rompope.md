@@ -107,4 +107,4 @@ Si esta gelatina va a formar parte de una mesa de postres, la guía de [cómo ar
 ---
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
-<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Acceder al Recetario Maestro" />
+<HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />

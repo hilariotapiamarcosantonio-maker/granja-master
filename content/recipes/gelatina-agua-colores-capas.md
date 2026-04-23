@@ -116,4 +116,4 @@ Una vez que tienes la técnica de capas dominada, el siguiente paso natural es c
 ---
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
-<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Acceder al Recetario Maestro" />
+<HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />

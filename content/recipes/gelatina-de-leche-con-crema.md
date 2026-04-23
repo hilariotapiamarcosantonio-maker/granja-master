@@ -112,4 +112,4 @@ Esta gelatina funciona sola, pero acepta acompañamientos:
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde Clásico de Cobre para Gelatina" />
 
-<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Descarga el Recetario Master (100+ Recetas Exclusivas)" />
+<HotmartButton url="/masterclass" texto="Descarga el Recetario Master (100+ Recetas Exclusivas)" />

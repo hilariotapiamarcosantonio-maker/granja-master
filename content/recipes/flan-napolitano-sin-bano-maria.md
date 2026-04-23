@@ -117,4 +117,4 @@ El flan napolitano es perfecto solo — el caramelo hace todo el trabajo. Pero s
 ---
 
 <AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
-<HotmartButton url="https://go.hotmart.com/F104277018P?ap=eda1" texto="Acceder al Recetario Maestro" />
+<HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />
