@@ -23,25 +23,25 @@ export default async function BlogIndex() {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
+        {posts.map((post: any) => (
           <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300">
             <div className="h-48 w-full bg-brand-surface relative overflow-hidden">
               <SafeImage
-    src={post.frontmatter.featuredImage || post.frontmatter.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"}
-    alt={post.frontmatter.title}
-    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
-    fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"
-  />
+                src={post.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"}
+                alt={post.title}
+                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"
+              />
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <div className="text-xs font-bold text-brand-accent mb-2 uppercase tracking-wider">
-                {post.frontmatter.category || "Artículo"}
+                {post.category || "Artículo"}
               </div>
               <h2 className="font-heading text-xl font-bold text-brand-text mb-2 group-hover:text-brand-primary line-clamp-2">
-                {post.frontmatter.title}
+                {post.title}
               </h2>
               <p className="text-gray-600 font-base text-sm line-clamp-3 mt-auto">
-                {post.frontmatter.excerpt || post.frontmatter.meta_description}
+                {post.excerpt || post.meta_description}
               </p>
             </div>
           </Link>

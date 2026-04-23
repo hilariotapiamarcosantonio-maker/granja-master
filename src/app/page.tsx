@@ -94,20 +94,20 @@ export default async function Home() {
           <Link href="/recetas" className="text-brand-primary font-bold border-b border-brand-primary pb-1 hover:text-brand-accent">Ver todo →</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredRecipes.map((recipe) => (
+          {featuredRecipes.map((recipe: any) => (
             <Link href={`/recetas/${recipe.slug}`} key={recipe.slug} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
               <div className="h-52 w-full overflow-hidden">
                 <SafeImage 
-                  src={recipe.frontmatter.featuredImage || recipe.frontmatter.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"} 
-                  alt={recipe.frontmatter.title} 
+                  src={recipe.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"} 
+                  alt={recipe.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="font-heading text-lg font-bold text-brand-text group-hover:text-brand-primary line-clamp-2 mb-4">{recipe.frontmatter.title}</h3>
+                <h3 className="font-heading text-lg font-bold text-brand-text group-hover:text-brand-primary line-clamp-2 mb-4">{recipe.title}</h3>
                 <p className="text-gray-500 text-sm font-base mt-2 mb-4 line-clamp-2">
-                  {recipe.frontmatter.excerpt || recipe.frontmatter.meta_description || "Aprende el paso a paso detallado para lograr la textura y sabor perfectos en esta preparación."}
+                  {recipe.excerpt || recipe.meta_description || "Aprende el paso a paso detallado para lograr la textura y sabor perfectos en esta preparación."}
                 </p>
                 <span className="text-brand-primary font-bold text-sm mt-auto group-hover:text-brand-accent transition-colors">
                   Ver receta →
@@ -125,20 +125,20 @@ export default async function Home() {
           <p className="text-gray-600 font-base">Consejos de negocio, errores comunes y guías de emprendimiento.</p>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestPosts.map((post) => (
+          {latestPosts.map((post: any) => (
             <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
               <div className="h-52 w-full overflow-hidden">
                 <SafeImage 
-                  src={post.frontmatter.featuredImage || post.frontmatter.image || "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=600&auto=format&fit=crop"} 
-                  alt={post.frontmatter.title}
+                  src={post.image || "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=600&auto=format&fit=crop"} 
+                  alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   fallback="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=600&auto=format&fit=crop"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="font-heading font-bold text-brand-text group-hover:text-brand-primary leading-snug line-clamp-2 mb-4">{post.frontmatter.title}</h3>
+                <h3 className="font-heading font-bold text-brand-text group-hover:text-brand-primary leading-snug line-clamp-2 mb-4">{post.title}</h3>
                 <p className="text-gray-500 text-sm font-base mt-2 mb-4 line-clamp-2">
-                  {post.frontmatter.excerpt || post.frontmatter.meta_description}
+                  {post.excerpt || post.meta_description}
                 </p>
                 <span className="text-brand-primary font-bold text-sm mt-auto group-hover:text-brand-accent transition-colors">
                   Leer más →

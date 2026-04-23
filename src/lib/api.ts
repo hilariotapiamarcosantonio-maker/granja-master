@@ -18,8 +18,15 @@ export function getPostBySlug(slug: string, type: 'recipes' | 'posts') {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
-
-  return { slug: realSlug, frontmatter: data, content };
+  
+  // Flatten common fields for easier frontend access
+  return { 
+    slug: realSlug, 
+    ...data, 
+    frontmatter: data, 
+    content,
+    image: data.image || data.featuredImage || data.featured_image
+  };
 }
 
 export function getAllPosts(type: 'recipes' | 'posts') {

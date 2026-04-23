@@ -23,26 +23,26 @@ export default async function RecetasIndex() {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {recipes.map((recipe) => (
+        {recipes.map((recipe: any) => (
           <Link href={`/recetas/${recipe.slug}`} key={recipe.slug} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300">
             <div className="h-56 w-full bg-brand-surface relative overflow-hidden">
               <SafeImage 
-                src={recipe.frontmatter.featuredImage || recipe.frontmatter.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"} 
-                alt={recipe.frontmatter.title}
+                src={recipe.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"} 
+                alt={recipe.title}
                 className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                 fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
               <h2 className="font-heading text-xl font-bold text-brand-text mb-3 group-hover:text-brand-primary transition-colors line-clamp-2">
-                {recipe.frontmatter.title}
+                {recipe.title}
               </h2>
               <div className="flex gap-3 text-xs text-gray-500 font-base mb-4 mt-auto">
                 <span className="bg-gray-50 px-2 py-1 rounded border border-gray-100">
-                  ⏱️ {recipe.frontmatter.prep_time || "15 min"}
+                  ⏱️ {recipe.prep_time || "15 min"}
                 </span>
                 <span className="bg-gray-50 px-2 py-1 rounded border border-gray-100">
-                  🍽️ {recipe.frontmatter.servings || "Varias"}
+                  🍽️ {recipe.servings || "Varias"}
                 </span>
               </div>
             </div>
