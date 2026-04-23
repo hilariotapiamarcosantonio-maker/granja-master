@@ -1,15 +1,24 @@
-'use client';
-
 import React from 'react';
+import { getAllPosts } from "@/lib/api";
+import Link from 'next/link';
 
-const recursos = [
-  { t: "El Negocio de las Gelatinas", d: "Blueprint Maestro: Rentabilidad en 15 Días", p: "$34.95", type: "Premium", link: "/masterclass", color: "bg-slate-950 text-yellow-400", img: "/images/recipes/gelatina-mosaico-premium.jpeg" },
-  { t: "Guía WhatsApp Business", d: "Guiones exactos para cerrar ventas por chat", p: "GRATIS", type: "Bono", link: "#", color: "bg-[#00B547] text-white", img: "/images/posts/usar-whatsapp-business-postres.jpeg" },
-  { t: "Planilla de Costos Excel", d: "Calculadora técnica de márgenes (Automatizada)", p: "GRATIS", type: "Herramienta", link: "#", color: "bg-[#00B547] text-white", img: "/images/posts/como-calcular-costos.jpeg" },
-  { t: "Recetario de Lanzamiento", d: "10 recetas diseñadas para la recompra semanal", p: "GRATIS", type: "Receta", link: "#", color: "bg-[#00B547] text-white", img: "/images/recipes/gelatina-fresa.jpeg" }
-];
+// Componente de servidor para cargar datos
+async function getLibraryData() {
+  const recipes = await getAllPosts('recipes');
+  // Ordenar y tomar 4 populares (usando el orden actual como proxy de popularidad por ahora)
+  const populares = recipes.slice(0, 4);
+  return { populares };
+}
 
-export default function BibliotecaPage() {
+export default async function BibliotecaPage() {
+  const { populares } = await getLibraryData();
+
+  const recursosDescargables = [
+    { t: "Calculadora de Costos", d: "Calculadora técnica de márgenes (Automatizada Excel)", link: "#" },
+    { t: "Guía WhatsApp Business", d: "Guiones exactos para cerrar ventas por chat", link: "#" },
+    { t: "Recetario de 10 Postres", d: "10 recetas diseñadas para la recompra semanal", link: "#" }
+  ];
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] pb-32 font-sans selection:bg-yellow-300 selection:text-black">
       {/* Header */}
@@ -18,36 +27,58 @@ export default function BibliotecaPage() {
           <div className="inline-block bg-white/10 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest text-yellow-400 border border-white/20">
             Acceso Inmediato
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter">Tu Arsenal de <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">Soberanía Digital.</span></h1>
-          <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">Descarga las herramientas de ingeniería comercial y comienza a facturar con tus postres hoy mismo.</p>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter">Tu Biblioteca <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">Maestra.</span></h1>
+          <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">Herramientas, guías y recetas para escalar tu negocio de postres.</p>
         </div>
       </section>
 
-      {/* Grid de Recursos */}
-      <section className="px-6 max-w-7xl mx-auto">
+      {/* Grid Principal: Masterclass destacada */}
+      <section className="px-6 max-w-7xl mx-auto mb-20">
+        <h2 className="text-3xl font-black tracking-tighter mb-10 text-slate-900">Entrenamiento Premium</h2>
+        <Link href="/masterclass" className="block group bg-white rounded-[2.5rem] border-4 border-yellow-400 shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 relative overflow-hidden p-1">
+          <div className="flex flex-col md:flex-row items-center gap-8 bg-slate-950 text-white rounded-[2rem] p-8 md:p-12">
+            <div className="flex-1 space-y-4">
+              <span className="text-yellow-400 font-black uppercase tracking-widest text-xs">Recomendado</span>
+              <h3 className="text-4xl md:text-5xl font-black tracking-tighter">Blueprint Maestro</h3>
+              <p className="text-slate-400 text-lg">El sistema completo para dominar la rentabilidad en el nicho de postres.</p>
+              <span className="inline-block bg-yellow-400 text-slate-950 font-black px-6 py-3 rounded-xl uppercase tracking-widest text-sm">Acceder al VSL</span>
+            </div>
+          </div>
+        </Link>
+      </section>
+
+      {/* Grid de Recetas (Muestras gratuitas) */}
+      <section className="px-6 max-w-7xl mx-auto mb-20">
+        <h2 className="text-3xl font-black tracking-tighter mb-10 text-slate-900">Muestras Gratuitas</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {recursos.map((item, i) => (
-            <div key={i} className="group bg-white rounded-[2.5rem] border-2 border-slate-100 hover:border-[#DC2626] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col h-full">
-              {item.type === "Premium" && <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 to-[#DC2626] z-20"></div>}
-              
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={item.img} alt={item.t} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className={`absolute top-4 left-4 text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-lg ${item.color}`}>
-                  {item.type}
-                </div>
+          {populares.map((post, i) => (
+            <Link key={i} href={`/recetas/${post.slug}`} className="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src={post.image || "/images/recipes/default.jpg"} alt={post.frontmatter.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              
-              <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-black tracking-tighter mb-4 text-slate-900 leading-tight">{item.t}</h3>
-                <p className="text-slate-500 text-sm mb-8 font-medium flex-grow">{item.d}</p>
-                
-                <div className="flex items-center justify-between pt-6 border-t-2 border-slate-50 mt-auto">
-                  <span className="font-black text-slate-900 text-lg">{item.p}</span>
-                  <a href={item.link} className="bg-slate-900 text-white text-[11px] font-black uppercase px-6 py-3 rounded-xl hover:bg-[#DC2626] transition-colors shadow-md">
-                    Acceder
-                  </a>
-                </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h4 className="text-lg font-bold text-slate-900 mb-2 leading-tight group-hover:text-[#DC2626] transition-colors">{post.frontmatter.title}</h4>
+                <p className="text-slate-500 text-xs font-medium flex-grow">{post.frontmatter.excerpt}</p>
               </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Sección de Descargas */}
+      <section className="px-6 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-black tracking-tighter mb-10 text-slate-900">Herramientas de Trabajo</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {recursosDescargables.map((item, i) => (
+            <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-center text-center shadow-sm">
+              <div className="w-16 h-16 bg-[#00B547]/10 text-[#00B547] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-2">{item.t}</h4>
+              <p className="text-slate-500 text-sm mb-6 flex-grow">{item.d}</p>
+              <a href={item.link} className="w-full bg-[#00B547] text-white font-black uppercase tracking-widest text-xs px-6 py-4 rounded-xl hover:bg-[#009b3d] transition-colors">
+                Obtener Gratis
+              </a>
             </div>
           ))}
         </div>
