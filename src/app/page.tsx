@@ -98,7 +98,7 @@ export default async function Home() {
             <Link href={`/recetas/${recipe.slug}`} key={recipe.slug} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
               <div className="h-52 w-full overflow-hidden">
                 <SafeImage 
-                  src={recipe.frontmatter.featuredImage || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"} 
+                  src={recipe.frontmatter.featuredImage || recipe.frontmatter.image || "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"} 
                   alt={recipe.frontmatter.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=600&auto=format&fit=crop"
@@ -129,7 +129,7 @@ export default async function Home() {
             <Link href={`/blog/${post.slug}`} key={post.slug} className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all">
               <div className="h-52 w-full overflow-hidden">
                 <SafeImage 
-                  src={post.frontmatter.featuredImage || "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=600&auto=format&fit=crop"} 
+                  src={post.frontmatter.featuredImage || post.frontmatter.image || "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=600&auto=format&fit=crop"} 
                   alt={post.frontmatter.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   fallback="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=600&auto=format&fit=crop"
