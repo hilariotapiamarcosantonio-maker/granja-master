@@ -38,13 +38,12 @@ export default function RootLayout({
     <Link href="/" className="font-heading text-xl font-bold text-brand-primary">
       Gelatinas y Postres
     </Link>
-    <nav className="flex items-center gap-6 text-sm font-bold text-brand-text">
-      <Link href="/" className="hover:text-brand-primary transition-colors">Inicio</Link>
+    <nav className="flex items-center gap-2 md:gap-6 text-[10px] md:text-sm font-bold text-brand-text">
+      <Link href="/" className="hover:text-brand-primary transition-colors hidden sm:block">Inicio</Link>
       <Link href="/recetas" className="hover:text-brand-primary transition-colors">Recetas</Link>
-      <Link href="/blog" className="hover:text-brand-primary transition-colors">Blog</Link>
-      <Link href="/biblioteca" className="hover:text-brand-primary transition-colors">Biblioteca</Link>
-      <Link href="/masterclass" className="bg-[#DC2626] text-white px-5 py-2.5 rounded-full font-black uppercase tracking-widest text-[10px] shadow-lg hover:scale-105 transition-all animate-pulse">
-        Masterclass VSL
+      <Link href="/blog" className="hover:text-brand-primary transition-colors hidden sm:block">Blog</Link>
+      <Link href="/masterclass" className="bg-[#DC2626] text-white px-3 py-2 md:px-5 md:py-2.5 rounded-full font-black uppercase tracking-widest text-[9px] md:text-[10px] shadow-lg hover:scale-105 transition-all animate-pulse">
+        Masterclass
       </Link>
     </nav>
   </div>
