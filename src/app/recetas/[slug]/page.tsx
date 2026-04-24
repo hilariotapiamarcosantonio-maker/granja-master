@@ -69,7 +69,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     return <Link href={href} {...rest} className="text-brand-primary font-bold hover:text-brand-accent underline transition-colors" />;
   };
 
-  const components = { HotmartButton, AmazonProduct, AmazonProductCard, a: CustomLink };
+  const components = { HotmartButton, AmazonProductCard, a: CustomLink };
 
   const postIndex = allRecipes.findIndex(p => p.slug === slug);
   const prevPost = postIndex > 0 ? allRecipes[postIndex - 1] : null;
@@ -105,9 +105,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         </div>
         <div className="my-10">
           <AmazonProductCard
-            title={post.frontmatter.amazonTitle || "Termómetro Digital Recomendado"}
-            image={post.frontmatter.amazonImage}
-            url={post.frontmatter.amazonLink || "https://amzn.to/4sOyo1n"}
+            title={post.frontmatter.amazonTitle as string || "Termómetro Digital Recomendado"}
+            image={post.frontmatter.amazonImage as string}
+            url={post.frontmatter.amazonLink as string || "https://amzn.to/4sOyo1n"}
           />
         </div>
       </article>
