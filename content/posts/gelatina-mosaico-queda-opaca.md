@@ -107,5 +107,5 @@ Si ya dominas los cubos, el siguiente paso natural es la [Gelatina de mosaico de
 
 ---
 
-<AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
+<AmazonProductCard title="Herramienta Recomendada" url="https://amzn.to/4sOyo1n" />
 <HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />

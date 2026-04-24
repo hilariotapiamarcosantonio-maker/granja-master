@@ -111,5 +111,5 @@ Empieza con tus contactos cercanos. Da una muestra gratuita a quien sabes que ti
 
 ---
 
-<AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
+<AmazonProductCard title="Herramienta Recomendada" url="https://amzn.to/4sOyo1n" />
 <HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />

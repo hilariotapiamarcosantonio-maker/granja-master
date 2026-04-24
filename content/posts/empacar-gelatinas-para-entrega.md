@@ -110,5 +110,5 @@ Si ya tienes el empaque resuelto, el siguiente desafío es el precio. Lee cómo 
 
 ---
 
-<AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
+<AmazonProductCard title="Herramienta Recomendada" url="https://amzn.to/4sOyo1n" />
 <HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />

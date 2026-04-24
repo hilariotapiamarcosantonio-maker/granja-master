@@ -110,6 +110,6 @@ Esta gelatina funciona sola, pero acepta acompañamientos:
 
 ¿Te quedaste con dudas sobre por qué a veces no queda firme? Tenemos una guía completa dedicada a ese tema: [Cómo hacer gelatina de leche que no quede aguada](INTERNAL:/gelatina-de-leche-perfecta) — con todos los trucos y proporciones explicadas paso a paso.
 
-<AmazonProduct asin="B00004OCNS" nombre="Molde Clásico de Cobre para Gelatina" />
+<AmazonProductCard title="Herramienta Recomendada" url="https://amzn.to/4sOyo1n" />
 
 <HotmartButton url="/masterclass" texto="Descarga el Recetario Master (100+ Recetas Exclusivas)" />

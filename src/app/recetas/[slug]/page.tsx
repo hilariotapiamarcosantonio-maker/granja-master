@@ -69,7 +69,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     return <Link href={href} {...rest} className="text-brand-primary font-bold hover:text-brand-accent underline transition-colors" />;
   };
 
-  const components = { HotmartButton, AmazonProductCard, a: CustomLink };
+  const AmazonProduct = () => null;
+  const components = { HotmartButton, AmazonProduct, AmazonProductCard, a: CustomLink };
 
   const postIndex = allRecipes.findIndex(p => p.slug === slug);
   const prevPost = postIndex > 0 ? allRecipes[postIndex - 1] : null;

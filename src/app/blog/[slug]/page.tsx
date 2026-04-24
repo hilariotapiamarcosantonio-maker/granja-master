@@ -49,7 +49,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     return <Link href={href} {...rest} className="text-brand-primary font-bold hover:text-brand-accent underline transition-colors" />;
   };
 
-  const components = { HotmartButton, a: CustomLink, AmazonProductCard };
+  const AmazonProduct = () => null;
+  const components = { HotmartButton, a: CustomLink, AmazonProduct, AmazonProductCard };
 
   const postIndex = allPosts.findIndex(p => p.slug === post.slug);
   const prevPost = postIndex > 0 ? allPosts[postIndex - 1] : null;

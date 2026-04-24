@@ -123,5 +123,5 @@ La gelatina de leche perfecta no tiene nada de magia — tiene técnica. Si hidr
 
 ---
 
-<AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
+<AmazonProductCard title="Herramienta Recomendada" url="https://amzn.to/4sOyo1n" />
 <HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />

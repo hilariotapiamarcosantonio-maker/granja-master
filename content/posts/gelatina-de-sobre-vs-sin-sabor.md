@@ -108,5 +108,5 @@ Para ver la grenetina en acción con la técnica correcta, la receta de [Gelatin
 
 ---
 
-<AmazonProduct asin="B00004OCNS" nombre="Molde para Gelatina Recomendado" />
+<AmazonProductCard title="Herramienta Recomendada" url="https://amzn.to/4sOyo1n" />
 <HotmartButton url="/masterclass" texto="Acceder al Recetario Maestro" />
