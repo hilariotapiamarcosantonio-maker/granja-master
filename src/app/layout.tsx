@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Open_Sans, Playfair_Display } from "next/font/google";
-import "./globals.css";
-import Link from "next/link";
-import Sidebar from "@/components/layout/Sidebar";
-import CookieBanner from "@/components/CookieBanner";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -56,7 +51,10 @@ export default function RootLayout({
         {/* Cierre */}
         <Footer />
         <CookieBanner />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+        <Analytics />
       </body>
     </html>
   );
 }
+"// Analytics Active" 
