@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import HotmartButton from "@/components/monetization/HotmartButton";
-import AmazonProduct from "@/components/monetization/AmazonProduct";
+import AmazonProductCard from "@/components/ui/AmazonProductCard";
 import SafeImage from "@/components/ui/SafeImage";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -49,7 +49,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     return <Link href={href} {...rest} className="text-brand-primary font-bold hover:text-brand-accent underline transition-colors" />;
   };
 
-  const components = { HotmartButton, AmazonProduct, a: CustomLink };
+  const components = { HotmartButton, AmazonProduct, AmazonProductCard, a: CustomLink };
 
   const postIndex = allPosts.findIndex(p => p.slug === post.slug);
   const prevPost = postIndex > 0 ? allPosts[postIndex - 1] : null;
@@ -82,6 +82,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <article className="bg-white p-0 md:p-8 rounded-2xl">
           <div className="prose prose-pink prose-lg max-w-none font-base text-brand-text prose-h1:hidden prose-img:rounded-xl">
             <MDXRemote source={post.content} components={components} />
+          </div>
+          <div className="my-10">
+            <AmazonProductCard
+              title={post.frontmatter.amazonTitle || "Termómetro Digital Recomendado"}
+              image={post.frontmatter.amazonImage}
+              url={post.frontmatter.amazonLink || "https://amzn.to/4sOyo1n"}
+            />
           </div>
         </article>
       </div>

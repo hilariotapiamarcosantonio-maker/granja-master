@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import HotmartButton from "../../../components/monetization/HotmartButton";
 import AmazonProduct from "../../../components/monetization/AmazonProduct";
-import AdPlaceholder from "@/components/AdPlaceholder";
+import AmazonProductCard from "@/components/ui/AmazonProductCard";
 import SafeImage from "@/components/ui/SafeImage";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -69,7 +69,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     return <Link href={href} {...rest} className="text-brand-primary font-bold hover:text-brand-accent underline transition-colors" />;
   };
 
-  const components = { HotmartButton, AmazonProduct, a: CustomLink };
+  const components = { HotmartButton, AmazonProduct, AmazonProductCard, a: CustomLink };
 
   const postIndex = allRecipes.findIndex(p => p.slug === slug);
   const prevPost = postIndex > 0 ? allRecipes[postIndex - 1] : null;
@@ -103,7 +103,13 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <div className="prose prose-pink prose-lg max-w-none font-base">
           <MDXRemote source={post.content} components={components} />
         </div>
-        <AdPlaceholder />
+        <div className="my-10">
+          <AmazonProductCard
+            title={post.frontmatter.amazonTitle || "Termómetro Digital Recomendado"}
+            image={post.frontmatter.amazonImage}
+            url={post.frontmatter.amazonLink || "https://amzn.to/4sOyo1n"}
+          />
+        </div>
       </article>
 
       {/* Navegación Premium entre Recetas */}
