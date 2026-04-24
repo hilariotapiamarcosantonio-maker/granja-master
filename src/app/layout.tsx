@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
+import { Open_Sans, Playfair_Display } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Sidebar from "@/components/layout/Sidebar";
+import CookieBanner from "@/components/CookieBanner";
+import Footer from "@/components/layout/Footer";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -24,6 +30,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="es" className={`${openSans.variable} ${playfair.variable}`}>
       <body className="flex min-h-screen flex-col antialiased bg-white">
@@ -51,10 +59,9 @@ export default function RootLayout({
         {/* Cierre */}
         <Footer />
         <CookieBanner />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <Analytics />
       </body>
     </html>
   );
 }
-"// Analytics Active" 
